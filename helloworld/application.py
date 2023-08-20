@@ -9,9 +9,13 @@ application = Flask(__name__)
 def get():
     return Response(json.dumps({'Output': 'Hello World'}), mimetype='application/json', status=200)
 
+@application.route('/greeting', methods=['GET'])
+def get():
+    return Response(json.dumps({'Output': 'Hello World Greeting of the day'}), mimetype='application/json', status=200)
+
 @application.route('/', methods=['POST'])
 def post():
-    return Response(json.dumps({'Output': 'Hello World'}), mimetype='application/json', status=200)
+    return Response(json.dumps({'Output': 'Hello World POST'}), mimetype='application/json', status=200)
 
 if __name__ == '__main__':
     default_port = "80"
