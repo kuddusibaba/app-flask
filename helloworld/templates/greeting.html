@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% if user=='Sahithi' %}
+    <!-- code to execute if condition is true -->
+
+<h2>
+  Hello  {{user}} !!! Greetings of the day.
+</h2>
+<hr/>
+{{messages}}
+<hr/>
+{{employee}}
+<hr/>
+{{student}}
+<hr/>
+<ol>
+    {% for message in messages   %}
+    <li>{{message}}</li>
+   {% endfor  %}
+</ol>
+<hr/>
+<ol>
+    {% for key in employee   %}
+    <li>{{key}} = {{employee[key]}}</li>
+   {% endfor  %}
+</ol>
+<hr/>
+<ol>
+    {% for value in student   %}
+    <li>{{value}}</li>
+   {% endfor  %}
+</ol>
+
+{% else %}
+    <font color="red" size="6"> Invalid User name</font>
+{% endif %}
+
+
+</body>
+</html>
