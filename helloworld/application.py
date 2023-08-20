@@ -10,7 +10,7 @@ def get():
     return Response(json.dumps({'Output': 'Hello World'}), mimetype='application/json', status=200)
 
 @application.route('/greeting', methods=['GET'])
-def get():
+def greeting():
     return Response(json.dumps({'Output': 'Hello World Greeting of the day'}), mimetype='application/json', status=200)
 
 @application.route('/', methods=['POST'])
